@@ -98,7 +98,7 @@ class TwitchRecorder:
 			logging.info("Full command will be %s", fullcomm)
 			logging.info("Started at %s", datetime.datetime.now().strftime("%H:%M:%S"))
 			with open(output, "a+") as f:
-				p = subprocess.Popen([self.custom_command, '"' + processed_filename + '"', self.recattempt], stdout=f, stderr=f)
+				p = subprocess.Popen([self.custom_command, processed_filename, self.recattempt], stdout=f, stderr=f)
 
 			logging.info("Finished at %s", datetime.datetime.now().strftime("%H:%M:%S"))
 
